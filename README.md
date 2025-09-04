@@ -30,5 +30,5 @@ Make sure you replace ldap.example.com with the IP of the server
 
 <br/>
 
-## To-Do:
+## To-Do (in progress):
 Make this K8s friendly so it can be easily deployed with a GitOps approach. (fleet directory)
