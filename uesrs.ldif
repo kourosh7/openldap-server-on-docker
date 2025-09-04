@@ -1,27 +1,3 @@
-dn: ou=users,dc=example,dc=org
-objectClass: organizationalUnit
-ou: users
-
-dn: uid=john.doe,ou=users,dc=example,dc=org
-objectClass: top
-objectClass: person
-objectClass: organizationalPerson
-objectClass: inetOrgPerson
-uid: john.doe
-cn: John Doe
-sn: Doe
-mail: john.doe@example.org
-
-dn: uid=jane.doe,ou=users,dc=example,dc=org
-objectClass: top
-objectClass: person
-objectClass: organizationalPerson
-objectClass: inetOrgPerson
-uid: jane.doe
-cn: Jane Doe
-sn: Doe
-mail: jane.doe@example.org
-
 dn: uid=peter.jones,ou=users,dc=example,dc=org
 objectClass: top
 objectClass: person
@@ -51,3 +27,22 @@ uid: brian
 cn: brian
 sn: brian
 mail: brian.almeida@suse.com
+
+dn: ou=groups,dc=example,dc=org
+objectClass: organizationalUnit
+ou: groups
+
+dn: cn=admins,ou=groups,dc=example,dc=org
+objectClass: top
+objectClass: groupOfNames
+cn: admins
+member: uid=kourosh,ou=users,dc=example,dc=org
+member: uid=brian,ou=users,dc=example,dc=org
+
+dn: cn=standard_users,ou=groups,dc=example,dc=org
+objectClass: top
+objectClass: groupOfNames
+cn: admins
+member: uid=john.doe,ou=users,dc=example,dc=org
+member: uid=jane.doe,ou=users,dc=example,dc=org
+member: uid=peter.jones,ou=users,dc=example,dc=org
