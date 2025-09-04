@@ -5,7 +5,7 @@ metadata:
     deployment.kubernetes.io/revision: "2"
     field.cattle.io/publicEndpoints: "null"
   labels:
-    workload.user.cattle.io/workloadselector: apps.deployment-default-openldap
+    app: openldap
   name: openldap
   namespace: default
 spec:
