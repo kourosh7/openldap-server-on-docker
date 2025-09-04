@@ -4,7 +4,7 @@ metadata:
   annotations:
     deployment.kubernetes.io/revision: "7"
   labels:
-    workload.user.cattle.io/workloadselector: apps.deployment-default-ldap-admin
+    app: ldap-admin
   name: ldap-admin
   namespace: default
 spec:
@@ -13,7 +13,7 @@ spec:
   revisionHistoryLimit: 10
   selector:
     matchLabels:
-      workload.user.cattle.io/workloadselector: apps.deployment-default-ldap-admin
+      app: ldap-admin
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -23,7 +23,7 @@ spec:
     metadata:
       creationTimestamp: null
       labels:
-        workload.user.cattle.io/workloadselector: apps.deployment-default-ldap-admin
+        app: ldap-admin
       namespace: default
     spec:
       containers:
