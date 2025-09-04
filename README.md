@@ -1,5 +1,5 @@
 # run an OpenLDAP server in a docker container and configure Rancher to use OpenLDAP authentication
-## This is good for quick tests and will use: https://github.com/osixia/docker-openldap
+## Configuration for quick tests that uses: https://github.com/osixia/docker-openldap
 
 1. Create an EC2 instance (Ubunutu) on AWS with the right networking (i.e. your security group should allow incoming TCP traffic on the ldap port 389)
 2. SSH into the EC2 instance
