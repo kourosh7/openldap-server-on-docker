@@ -13,6 +13,8 @@
 10. Set the password for users `kourosh` with: `ldappasswd -H ldap://localhost -D "cn=admin,dc=example,dc=org" -w admin -S "uid=kourosh,ou=users,dc=example,dc=org" -s password`
 11. See the file named `Rancher-OpenLDAP-Config.png` in this repo for how to configure Rancher to use OpenLDAP for Authentication.
 
+<br/>
+
 ## Now, we can also run a php LDAP admin UI using: https://github.com/osixia/docker-phpLDAPadmin
 
 1. The website will run on port 6443 so make sure to enable inbound TCP traffic on that port in your AWS security group
