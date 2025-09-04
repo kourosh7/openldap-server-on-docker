@@ -14,7 +14,7 @@ spec:
   revisionHistoryLimit: 10
   selector:
     matchLabels:
-      workload.user.cattle.io/workloadselector: apps.deployment-default-openldap
+      app: openldap
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -24,7 +24,7 @@ spec:
     metadata:
       creationTimestamp: null
       labels:
-        workload.user.cattle.io/workloadselector: apps.deployment-default-openldap
+        app: openldap
       namespace: default
     spec:
       containers:
