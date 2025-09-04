@@ -14,4 +14,4 @@ spec:
       port: 636
       targetPort: 636
   selector:
-    workload.user.cattle.io/workloadselector: apps.deployment-default-openldap
+    app: openldap
