@@ -1,7 +1,7 @@
 # openldap-server-on-docker
-This is good for quick tests and will use: https://github.com/osixia/docker-openldap
+## This is good for quick tests and will use: https://github.com/osixia/docker-openldap
 
-1. Create an EC2 instance (Ubunutu) on AWS with the right networking (i.e. your security group should allow incoming tcp traffic on the ldap port 389)
+1. Create an EC2 instance (Ubunutu) on AWS with the right networking (i.e. your security group should allow incoming TCP traffic on the ldap port 389)
 2. SSH into the EC2 instance
 3. Install Docker: `curl https://releases.rancher.com/install-docker/28.1.sh | sh`
 4. Run: `docker run -p 389:389 -p 636:636 --name my-openldap-container --detach osixia/openldap:1.5.0`
@@ -12,3 +12,16 @@ This is good for quick tests and will use: https://github.com/osixia/docker-open
 9. Use the `users.ldif` file from this repo to create a users OU with some users by running: `ldapadd -h localhost -p 389 -D "cn=admin,dc=example,dc=org" -w admin -c  < users.ldif`
 10. Set the password for users `kourosh` with: `ldappasswd -H ldap://localhost -D "cn=admin,dc=example,dc=org" -w admin -S "uid=kourosh,ou=users,dc=example,dc=org" -s password`
 11. See the file named `Rancher-OpenLDAP-Config.png` in this repo for how to configure Rancher to use OpenLDAP for Authentication.
+
+## Now, we can also run a php LDAP admin UI using: https://github.com/osixia/docker-phpLDAPadmin
+
+1. The website will run on port 6443 so make sure to enable inbound TCP traffic on that port in your AWS security group
+2. Run:
+```
+docker run -p 6443:443 \
+        --env PHPLDAPADMIN_LDAP_HOSTS=ldap.example.com \
+        --detach osixia/phpldapadmin:0.9.0
+```
+Make sure you replace ldap.example.com with the IP of the server
+3. Now simply access interface using https://<IP>:6443
+4. When you login, make sure to use `cn=admin,dc=example,dc=org` as the username
