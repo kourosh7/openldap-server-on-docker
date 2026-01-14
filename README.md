@@ -11,7 +11,8 @@
 8. Now you should be able to run the following locally: `ldapsearch -x -H ldap://localhost -b dc=example,dc=org -D "cn=admin,dc=example,dc=org" -w admin`
 9. Use the `users.ldif` file from this repo to create a users OU with some users by running: `ldapadd -H ldap://localhost:389 -D "cn=admin,dc=example,dc=org" -w admin -c  < users.ldif`
 10. Set the password for any of the users, i.e. for user `kourosh` use: `ldappasswd -H ldap://localhost -D "cn=admin,dc=example,dc=org" -w admin -S "uid=kourosh,ou=users,dc=example,dc=org" -s password`
-11. See the file named `Rancher-OpenLDAP-Config.png` in this repo for how to configure Rancher to use OpenLDAP for Authentication.
+11. In the Rancher UI go to Users & Authentication > Auth Provider > OpenLDAP
+12. See the file named `Rancher-OpenLDAP-Config.png` in this repo for how to configure Rancher to use OpenLDAP for Authentication.
 
 <br/>
 
