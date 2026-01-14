@@ -25,6 +25,7 @@ docker run -p 6443:443 \
         --detach osixia/phpldapadmin:0.9.0
 ```
 Make sure you replace ldap.example.com with the IP of the server
+
 3. Now simply access interface using https://<IP>:6443
 4. When you login, make sure to use `cn=admin,dc=example,dc=org` as the username
 
