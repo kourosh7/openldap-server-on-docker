@@ -26,7 +26,7 @@ docker run -p 6443:443 \
 ```
 Make sure you replace ldap.example.com with the IP of the server
 
-3. Now simply access interface using https://<IP>:6443
+3. Now simply access interface using `https://<LDAP_SERVER_IP>:6443`
 4. When you login, make sure to use `cn=admin,dc=example,dc=org` as the username with the password `admin`
 
 <br/>
