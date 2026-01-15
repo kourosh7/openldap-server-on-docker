@@ -47,6 +47,6 @@ dn: cn=standard_users,ou=groups,dc=example,dc=org
 objectClass: top
 objectClass: groupOfNames
 cn: standard_users
-member: uid=john.doe,ou=users,dc=example,dc=org
+member: uid=brian,ou=users,dc=example,dc=org
 member: uid=jane.doe,ou=users,dc=example,dc=org
 member: uid=peter.jones,ou=users,dc=example,dc=org
