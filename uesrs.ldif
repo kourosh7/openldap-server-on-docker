@@ -12,6 +12,16 @@ cn: Peter Jones
 sn: Jones
 mail: peter.jones@example.org
 
+dn: uid=jane.doe,ou=users,dc=example,dc=org
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+uid: peter.jones
+cn: Peter Jones
+sn: Jones
+mail: jane.doe@example.org
+
 dn: uid=kourosh,ou=users,dc=example,dc=org
 objectClass: top
 objectClass: person
@@ -20,7 +30,6 @@ objectClass: inetOrgPerson
 uid: kourosh
 cn: kourosh
 sn: kourosh
-mail: kourosh.maneshni@suse.com
 
 dn: uid=brian,ou=users,dc=example,dc=org
 objectClass: top
@@ -30,7 +39,6 @@ objectClass: inetOrgPerson
 uid: brian
 cn: brian
 sn: brian
-mail: brian.almeida@suse.com
 
 dn: ou=groups,dc=example,dc=org
 objectClass: organizationalUnit
