@@ -17,9 +17,9 @@ objectClass: top
 objectClass: person
 objectClass: organizationalPerson
 objectClass: inetOrgPerson
-uid: peter.jones
-cn: Peter Jones
-sn: Jones
+uid: jane.doe
+cn: Jane Doe
+sn: jdoe
 mail: jane.doe@example.org
 
 dn: uid=kourosh,ou=users,dc=example,dc=org
@@ -32,9 +32,6 @@ cn: kourosh
 sn: kourosh
 
 dn: uid=brian,ou=users,dc=example,dc=org
-objectClass: top
-objectClass: person
-objectClass: organizationalPerson
 objectClass: inetOrgPerson
 uid: brian
 cn: brian
