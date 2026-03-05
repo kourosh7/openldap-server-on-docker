@@ -32,6 +32,9 @@ cn: kourosh
 sn: kourosh
 
 dn: uid=brian,ou=users,dc=example,dc=org
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
 objectClass: inetOrgPerson
 uid: brian
 cn: brian
